@@ -1,0 +1,37 @@
+{
+    "name": "@awsp__/utils",
+    "version": "1.0.3",
+    "description": "Reusable utilities, middlewares, and validation for authentication and validation",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "pb": "npm publish --access public",
+        "test": "jest"
+    },
+    "keywords": [
+        "express",
+        "middlewares",
+        "validation",
+        "aws",
+        "cognito"
+    ],
+    "author": "Alexander",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.21.2",
+        "express-rate-limit": "^7.5.0",
+        "winston": "^3.17.0",
+        "winston-daily-rotate-file": "^5.0.0",
+        "zod": "^3.24.1",
+        "typeorm": "^0.3.20"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.0",
+        "@types/jest": "^29.5.14",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.2.5",
+        "typescript": "^5.7.3",
+        "@types/node": "^20.11.19"
+    }
+}
