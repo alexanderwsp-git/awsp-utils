@@ -9,4 +9,4 @@ export const WeightSchema = z.object({
 });
 
 export type Weight = z.infer<typeof WeightSchema>;
-export const WeightPartialSchema = WeightSchema.partial(); 
+export const WeightPartialSchema = WeightSchema.partial();

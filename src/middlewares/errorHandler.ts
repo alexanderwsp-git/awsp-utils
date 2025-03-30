@@ -12,12 +12,7 @@ const authenticationErrors = (error: Error): string | null => {
     return errorMessages[error.name] || null;
 };
 
-export const errorHandler = (
-    error: Error,
-    req: Request,
-    res: Response,
-    next: NextFunction
-) => {
+export const errorHandler = (error: Error, req: Request, res: Response, next: NextFunction) => {
     logger.error(`${error.message}`);
 
     const authError = authenticationErrors(error);

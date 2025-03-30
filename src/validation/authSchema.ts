@@ -41,9 +41,7 @@ export const ForgotPasswordSchema = z.object({
 export const ResetPasswordSchema = z.object({
     username: z.string().min(3, 'Username is required'),
     confirmationCode: z.string().min(6, 'Confirmation code is required'),
-    newPassword: z
-        .string()
-        .min(8, 'New password must be at least 8 characters'),
+    newPassword: z.string().min(8, 'New password must be at least 8 characters'),
 });
 
 export const DisableUserSchema = z.object({

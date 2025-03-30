@@ -3,7 +3,7 @@ import { z } from 'zod';
 export enum MatingStatus {
     PENDING = 'Pending',
     EFFECTIVE = 'Effective',
-    INEFFECTIVE = 'Ineffective'
+    INEFFECTIVE = 'Ineffective',
 }
 
 export const MatingSchema = z.object({
@@ -19,4 +19,4 @@ export const MatingSchema = z.object({
 });
 
 export type Mating = z.infer<typeof MatingSchema>;
-export const MatingPartialSchema = MatingSchema.partial(); 
+export const MatingPartialSchema = MatingSchema.partial();

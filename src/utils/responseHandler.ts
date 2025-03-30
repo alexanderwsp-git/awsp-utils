@@ -28,11 +28,7 @@ export const updated = <T>(res: Response, data: T | null): void =>
 export const deleted = (res: Response): void =>
     sendResponse(res, 204, 'Resource deleted successfully', null);
 
-export const failed = (
-    res: Response,
-    error: unknown,
-    message = 'Request failed'
-): void => {
+export const failed = (res: Response, error: unknown, message = 'Request failed'): void => {
     const errorMessage = error instanceof Error ? error.message : String(error);
     sendResponse(res, 207, message, null, errorMessage);
 };

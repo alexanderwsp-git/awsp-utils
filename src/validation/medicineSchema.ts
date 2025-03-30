@@ -5,14 +5,14 @@ export enum MedicineType {
     ANTIBIOTIC = 'Antibiotic',
     VITAMIN = 'Vitamin',
     DEWORMER = 'Dewormer',
-    OTHER = 'Other'
+    OTHER = 'Other',
 }
 
 export enum MedicineStatus {
     SCHEDULED = 'Scheduled',
     APPLIED = 'Applied',
     CANCELLED = 'Cancelled',
-    MISSED = 'Missed'
+    MISSED = 'Missed',
 }
 
 export const MedicineSchema = z.object({
@@ -38,4 +38,4 @@ export const MedicineApplicationSchema = z.object({
 });
 
 export type MedicineApplication = z.infer<typeof MedicineApplicationSchema>;
-export const MedicineApplicationPartialSchema = MedicineApplicationSchema.partial(); 
+export const MedicineApplicationPartialSchema = MedicineApplicationSchema.partial();

@@ -4,7 +4,7 @@ export enum RecordType {
     BORN = 'Born on Farm',
     PURCHASED = 'Purchased',
     DONATED = 'Donated',
-    TRANSFERRED = 'Transferred'
+    TRANSFERRED = 'Transferred',
 }
 
 export enum SheepBreed {
@@ -18,11 +18,11 @@ export enum SheepBreed {
     SANTA_INES = 'Santa Inés',
     MORADA_NOVA = 'Morada Nova',
     BLACKBELLY = 'Blackbelly',
-  
+
     // Wool
     RAMBOUILLET = 'Rambouillet',
     MERINO = 'Merino',
-  
+
     // Dual-purpose
     CORRIEDALE = 'Corriedale',
     TEXEL = 'Texel',
@@ -37,7 +37,7 @@ export enum SheepCategory {
     BREEDING_RAM = 'Breeding Ram',
     MALE_SALE = 'Male for Sale',
     MALE_SLAUGHTER = 'Male for Slaughter',
-  
+
     // Female
     LAMB_FEMALE = 'Lamb (Female)',
     WEANED_LAMB_FEMALE = 'Weaned Lamb (Female)',
@@ -46,7 +46,7 @@ export enum SheepCategory {
     LACTATING_EWE = 'Lactating Ewe',
     EMPTY_EWE = 'Empty Ewe',
     FEMALE_SALE = 'Female for Sale',
-    FEMALE_SLAUGHTER = 'Female for Slaughter'
+    FEMALE_SLAUGHTER = 'Female for Slaughter',
 }
 
 export enum SheepStatus {
@@ -54,17 +54,17 @@ export enum SheepStatus {
     INACTIVE = 'Inactive',
     SOLD = 'Sold',
     DECEASED = 'Deceased',
-    QUARANTINE = 'Quarantine'
+    QUARANTINE = 'Quarantine',
 }
 
 export enum BirthType {
     SINGLE = 'Single',
-    TWIN = 'Twin'
+    TWIN = 'Twin',
 }
 
 export enum Gender {
     MALE = 'Male',
-    FEMALE = 'Female'
+    FEMALE = 'Female',
 }
 
 export const SheepSchema = z.object({
@@ -81,9 +81,9 @@ export const SheepSchema = z.object({
     recordType: z.nativeEnum(RecordType),
     quarantineEndDate: z.date().optional(),
     motherId: z.string().uuid().optional(),
-    fatherId: z.string().uuid().optional()
-  });
+    fatherId: z.string().uuid().optional(),
+});
 
 export type Sheep = z.infer<typeof SheepSchema>;
 
-export const SheepPartialSchema = SheepSchema.partial(); 
+export const SheepPartialSchema = SheepSchema.partial();

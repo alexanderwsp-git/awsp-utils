@@ -7,7 +7,7 @@ export const validateSchema =
         const parsed = await schema.safeParseAsync(req.body);
         if (!parsed.success) {
             res.status(207).json({
-                error: parsed.error.errors.map((err) => ({
+                error: parsed.error.errors.map(err => ({
                     field: err.path.join('.'),
                     message: err.message,
                 })),
