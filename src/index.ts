@@ -16,3 +16,4 @@ export * from './validation/matingSchema';
 export * from './validation/pregnancyCheckSchema';
 export * from './validation/medicineSchema';
 export * from './validation/weightSchema';
+export * from './validation/locationSchema';

@@ -6,6 +6,12 @@ export const AuthSchema = z.object({
     email: z.string().email('Invalid email format').optional(),
 });
 
+export const CognitoIdTokenSchema = z.object({
+    email: z.string().email(),
+    username: z.string().optional(),
+    'cognito:username': z.string().optional(),
+});
+
 export const RefreshTokenSchema = z.object({
     refreshToken: z.string().min(10, 'Refresh token is required'),
 });
