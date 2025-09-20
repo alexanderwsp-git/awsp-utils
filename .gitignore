@@ -55,3 +55,4 @@ npm-shrinkwrap.json
 # Temporary files
 tmp/
 temp/
+token.sh

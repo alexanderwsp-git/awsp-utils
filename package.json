@@ -1,6 +1,9 @@
 {
-    "name": "@awsp__/utils",
-    "version": "1.0.4",
+  "name": "@alexanderwsp-git/awsp-utils",
+  "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
     "description": "Reusable utilities, middlewares, and validation for authentication and validation",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
