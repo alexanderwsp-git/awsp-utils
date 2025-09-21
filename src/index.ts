@@ -8,6 +8,8 @@ export * from './middlewares/validateQuery';
 
 export * from './utils/responseHandler';
 
+export * from './services/emailService';
+
 export * from './validation/authSchema';
 export * from './validation/settingSchema';
 export * from './validation/requestSchema';
